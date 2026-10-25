@@ -1,11 +1,9 @@
 "use client";
 
-import { GitFork, Mail, Volume2, VolumeX } from "lucide-react";
+import { Volume2, VolumeX } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import type { ComponentType } from "react";
 import { useEffect, useState } from "react";
-import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { SiLeetcode } from "react-icons/si";
@@ -13,9 +11,6 @@ import { SiLeetcode } from "react-icons/si";
 /* ------------------------------------------------------------------ */
 /* Data                                                                */
 /* ------------------------------------------------------------------ */
-
-type IconProps = { className?: string };
-type IconComponent = ComponentType<IconProps>;
 
 const ROLES = ["UI/UX Designer", "Web Developer", "Problem Solver"] as const;
 
@@ -148,30 +143,6 @@ export function Banner() {
 /* Parts                                                               */
 /* ------------------------------------------------------------------ */
 
-function IconGroup({ title, items }: { title: string; items: LinkItem[] }) {
-  return (
-    <div className="flex flex-col gap-4">
-      <h3 className="text-[13px] font-bold tracking-[0.2em] text-white uppercase">
-        {title}
-      </h3>
-      <div className="flex gap-3">
-        {items.map((item) => (
-          <a
-            key={item.name}
-            href={item.href}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={item.name}
-            className="group grid size-12 place-items-center rounded-md bg-[#191919] text-white/70 ring-1 ring-white/[0.05] transition-all duration-300 hover:-translate-y-1 hover:bg-amber-400 hover:text-black hover:ring-amber-400 group-hover:[&_path]:fill-black"
-          >
-            <item.icon className="size-5" />
-          </a>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 function useTypewriter(
   words: readonly string[],
   typingSpeed = 95,
@@ -210,34 +181,4 @@ function useTypewriter(
   }, [text, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, pause]);
 
   return text;
-}
-
-/* ------------------------------------------------------------------ */
-/* Icons                                                               */
-/* ------------------------------------------------------------------ */
-
-function TwitterIcon({ className }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      aria-hidden="true"
-      className={className}
-    >
-      <path d="M23.953 4.57a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.06a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.936 4.936 0 0 0 4.604 3.417 9.867 9.867 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0 0 24 4.59z" />
-    </svg>
-  );
-}
-
-function LinkedInIcon({ className }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      aria-hidden="true"
-      className={className}
-    >
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-    </svg>
-  );
 }
