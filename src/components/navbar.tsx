@@ -8,6 +8,7 @@ import { useState } from "react";
 const NAV_LINKS = [
   "Home",
   "Features",
+  "Skills",
   "Resume",
   "Clients",
   "Contacts",

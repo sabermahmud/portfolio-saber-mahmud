@@ -38,13 +38,13 @@ const SERVICES: Service[] = [
     description:
       "I integrate REST APIs into web applications, handling data fetching, loading states, error handling, and dynamic content.",
   },
-  
+
   {
     icon: AlignJustify,
     title: "Full-Stack Web Development",
     description:
       "I develop end-to-end web applications by connecting interactive frontends with server-side logic, APIs, and databases",
-  }
+  },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -71,10 +71,11 @@ export function Features({ items = SERVICES, className }: FeaturesProps) {
           Features
         </p>
         <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-          What I Do
+          What I Do<span className="text-amber-500">.</span>
         </h2>
         <p className="text-white/50">
-          I build modern web experiences by combining clean code, thoughtful UI design, and practical problem-solving.
+          I build modern web experiences by combining clean code, thoughtful UI
+          design, and practical problem-solving.
         </p>
 
         {/* ---------------- Cards ---------------- */}

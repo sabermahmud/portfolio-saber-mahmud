@@ -1,4 +1,3 @@
-
 import type { IconType } from "react-icons";
 import { DiMongodb } from "react-icons/di";
 import { FaJs, FaReact } from "react-icons/fa";
@@ -22,8 +21,7 @@ export function Skills() {
     {
       icon: RiTailwindCssFill,
       title: "Tailwind CSS",
-      color:
-        "text-sky-400 border-sky-400/40 bg-sky-400/10 hover:bg-sky-400/20",
+      color: "text-sky-400 border-sky-400/40 bg-sky-400/10 hover:bg-sky-400/20",
     },
     {
       icon: SiDaisyui,
@@ -34,8 +32,7 @@ export function Skills() {
     {
       icon: SiShadcnui,
       title: "shadcn/ui",
-      color:
-        "text-white border-white/30 bg-white/5 hover:bg-white/10",
+      color: "text-white border-white/30 bg-white/5 hover:bg-white/10",
     },
     {
       icon: FaJs,
@@ -58,8 +55,7 @@ export function Skills() {
     {
       icon: RiNextjsLine,
       title: "Next.js",
-      color:
-        "text-white border-white/30 bg-white/5 hover:bg-white/10",
+      color: "text-white border-white/30 bg-white/5 hover:bg-white/10",
     },
     {
       icon: FaNodeJs,
@@ -85,7 +81,7 @@ export function Skills() {
     <section
       id="skills"
       aria-labelledby="skills-heading"
-      className="scroll-mt-20 border-l border-amber-500/50 bg-[#0f0f0f] px-6 py-24 sm:px-8"
+      className="scroll-mt-20  bg-[#130000] px-6 py-24 sm:px-8 h-screen"
     >
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}

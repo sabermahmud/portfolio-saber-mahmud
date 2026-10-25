@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sulphur_Point } from "next/font/google";
 import "./globals.css";
+import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 
 const sulphurPoint = Sulphur_Point({
@@ -21,8 +22,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <header>
           <Navbar />
         </header>
-        <main>{children}</main>
-        <footer></footer>
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );

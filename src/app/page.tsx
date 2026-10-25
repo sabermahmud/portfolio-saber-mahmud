@@ -7,8 +7,12 @@ export default function Home() {
     <div className="bg-[#0f0f0f] font-sans text-white">
       <Banner />
       <div className="  grid grid-cols-1 lg:grid-cols-3 items-start max-w-7xl mx-auto">
-        <div className="lg:col-span-2"><Features /></div>
-        <div className="lg:col-span-1"><Skills/></div>
+        <div className="lg:col-span-2">
+          <Features />
+        </div>
+        <div className="lg:col-span-1">
+          <Skills />
+        </div>
       </div>
     </div>
   );
