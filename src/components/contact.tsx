@@ -19,8 +19,8 @@ import { SiLeetcode } from "react-icons/si";
 const CONTACT_EMAIL = "sabermahmud01@gmail.com";
 
 /** TODO: replace with your real phone number before deploying. */
-const PHONE = "+880 1XXX XXXXXX";
-
+const PHONE = "+880 1606093319";
+const SECONDPHONE = "+966 533447412"
 const PROFILE = {
   name: "Saber Mahmud",
   role: "Web Developer",
@@ -197,7 +197,7 @@ export function Contact({ className }: ContactProps) {
                     href={`tel:${PHONE.replace(/[^\d+]/g, "")}`}
                     className="transition-colors hover:text-amber-400"
                   >
-                    {PHONE}
+                    {PHONE}, {SECONDPHONE}
                   </a>
                 </dd>
               </div>
