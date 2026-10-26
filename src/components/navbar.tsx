@@ -9,6 +9,7 @@ const NAV_LINKS = [
   "Home",
   "Features",
   "Skills",
+  "Projects",
   "Resume",
   "Clients",
   "Contacts",

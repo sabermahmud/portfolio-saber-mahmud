@@ -17,6 +17,8 @@ type FooterLink = {
 const QUICK_LINKS: FooterLink[] = [
   { label: "Home", href: "#home" },
   { label: "Features", href: "#features" },
+  { label: "Skills", href: "#skills" },
+  { label: "My Portfolio", href: "#myportfolio" },
   { label: "Resume", href: "#resume" },
   { label: "Clients", href: "#clients" },
   { label: "Contact", href: "#contact" },
