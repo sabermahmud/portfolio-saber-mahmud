@@ -81,7 +81,7 @@ export function Skills() {
     <section
       id="skills"
       aria-labelledby="skills-heading"
-      className="scroll-mt-20  bg-[#130000] px-6 py-24 sm:px-8 h-screen"
+      className="scroll-mt-20   px-6 py-24 sm:px-8 h-screen"
     >
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}
@@ -105,15 +105,15 @@ export function Skills() {
         </div>
 
         {/* Skills Badges */}
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="grid grid-cols-2 items-center gap-3">
           {skills.map(({ icon: Icon, title, color }) => (
             <div
               key={title}
-              className={`inline-flex items-center gap-2 rounded-full border px-4 py-2.5 transition-colors duration-200 ${color}`}
+              className={`inline-flex items-center gap-2 rounded-full border px-4 py-2.5 transition-colors duration-200 w-40 md:w-full justify-center ${color}`}
             >
-              <Icon size={18} aria-hidden="true" />
+              <Icon size={25} aria-hidden="true" />
 
-              <span className="text-sm font-medium">{title}</span>
+              <span className="text-base md:text-lg font-medium">{title}</span>
             </div>
           ))}
         </div>

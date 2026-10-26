@@ -66,17 +66,19 @@ const PROJECTS: Project[] = [
 // Each technology keeps a consistent color across all project cards.
 const TECHNOLOGY_COLORS: Record<string, string> = {
   "Next.js":
-    "border-white/20 bg-white/10 text-white hover:bg-white/15",
+    "text-white border-white/30 bg-white/5 hover:bg-white/10",
   TypeScript:
-    "border-blue-400/30 bg-blue-400/10 text-blue-300 hover:bg-blue-400/20",
+    "text-blue-400 border-blue-400/40 bg-blue-400/10 hover:bg-blue-400/20",
   "Tailwind CSS":
-    "border-cyan-400/30 bg-cyan-400/10 text-cyan-300 hover:bg-cyan-400/20",
+    "text-sky-400 border-sky-400/40 bg-sky-400/10 hover:bg-sky-400/20",
   MongoDB:
-    "border-green-400/30 bg-green-400/10 text-green-300 hover:bg-green-400/20",
+    "text-emerald-400 border-emerald-400/40 bg-emerald-400/10 hover:bg-emerald-400/20",
   React:
-    "border-sky-400/30 bg-sky-400/10 text-sky-300 hover:bg-sky-400/20",
+    "text-cyan-400 border-cyan-400/40 bg-cyan-400/10 hover:bg-cyan-400/20",
   JavaScript:
-    "border-yellow-400/30 bg-yellow-400/10 text-yellow-300 hover:bg-yellow-400/20",
+    "text-yellow-400 border-yellow-400/40 bg-yellow-400/10 hover:bg-yellow-400/20",
+  BetterAuth:
+    "text-violet-400 border-violet-400/40 bg-violet-400/10 hover:bg-violet-400/20",
 };
 
 const DEFAULT_TECHNOLOGY_COLOR =
@@ -113,7 +115,7 @@ export function Portfolio({
             id="myportfolio-heading"
             className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl"
           >
-            Featured Projects
+            My Projects
           </h2>
 
           <p className="mt-5 text-sm leading-7 text-white/60 sm:text-base">
@@ -138,7 +140,7 @@ export function Portfolio({
                 onClick={() => setActiveFilter(filter)}
                 aria-pressed={isActive}
                 className={cn(
-                  "rounded-lg border px-4 py-2.5 text-sm font-semibold transition-colors",
+                  "rounded-full border px-4 py-2.5 text-sm font-semibold transition-colors",
                   isActive
                     ? "border-amber-500 bg-red-500/10 text-amber-400"
                     : "border-white/10 bg-white/3 text-white/65 hover:border-white/20 hover:text-white",
@@ -210,12 +212,12 @@ function ProjectCard({ project }: { project: Project }) {
         </p>
 
         {/* Technology badges with individual colors */}
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="my-4 flex flex-wrap gap-3">
           {project.technologies.map((technology) => (
             <span
               key={technology}
               className={cn(
-                "rounded-md border px-2.5 py-1.5 text-xs font-medium transition-colors duration-200",
+                "rounded-full border px-2.5 py-1.5 text-xs font-medium transition-colors duration-200",
                 TECHNOLOGY_COLORS[technology] ??
                   DEFAULT_TECHNOLOGY_COLOR,
               )}
@@ -226,7 +228,7 @@ function ProjectCard({ project }: { project: Project }) {
         </div>
 
         {/* Project links */}
-        <div className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-white/8 pt-4 mt-6">
+        <div className="mt-auto flex flex-wrap items-center justify-between border-t border-white/8 pt-4">
           {project.liveUrl ? (
             <a
               href={project.liveUrl}
