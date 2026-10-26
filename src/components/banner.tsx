@@ -82,7 +82,7 @@ export function Banner() {
               </span>
             </div>
 
-            <p className="mb-4 text-xs font-semibold tracking-[0.24em] text-white/45 uppercase sm:text-sm">
+            <p className="mb-4 text-xs font-semibold tracking-[0.24em] text-amber-300/45 uppercase sm:text-lg">
               Hello, I&apos;m
             </p>
 
