@@ -6,16 +6,14 @@ import Image from "next/image";
 import { useState } from "react";
 
 const NAV_LINKS = [
-  "Home",
-  "Features",
-  "Skills",
-  "Projects",
-  "Resume",
-  "Clients",
-  "Contacts",
+  { label: "Home", href: "#home" },
+  { label: "Features", href: "#features" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#myportfolio" },
+  { label: "Contacts", href: "#contact" },
 ] as const;
 
-type NavItem = (typeof NAV_LINKS)[number];
+type NavItem = (typeof NAV_LINKS)[number]["label"];
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,25 +34,25 @@ export function Navbar() {
             />
           </span>
           <span className="text-lg md:text-xl lg:text-3xl font-extrabold tracking-[0.22em] text-white">
-            SABER.<span className="text-amber-400">DEV</span>
+            SABER.<span className="text-amber-300">DEV</span>
           </span>
         </a>
 
         {/* Primary navigation */}
         <nav className="hidden items-center gap-5 lg:flex">
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.map(({ label, href }) => (
             <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
-              onClick={() => setActiveLink(link)}
+              key={label}
+              href={href}
+              onClick={() => setActiveLink(label)}
               className={cn(
                 "text-base font-bold uppercase tracking-[0.14em] transition-colors duration-200",
-                activeLink === link
+                activeLink === label
                   ? "text-white"
-                  : "text-white/55 hover:text-amber-400",
+                  : "text-white/55 hover:text-amber-300",
               )}
             >
-              {link}
+              {label}
             </a>
           ))}
         </nav>
@@ -63,7 +61,7 @@ export function Navbar() {
         <div className="flex shrink-0 items-center gap-2.5">
           <a
             href="#contact"
-            className="hidden h-11 items-center rounded-md bg-amber-400 text-black px-6 text-base font-extrabold tracking-[0.12em] hover:text-white uppercase transition-colors hover:bg-amber-600 sm:inline-flex"
+            className="hidden h-11 items-center rounded-md bg-amber-300 text-black px-6 text-base font-extrabold tracking-[0.12em] hover:text-white uppercase transition-colors hover:bg-amber-600 sm:inline-flex"
           >
             Contact us
           </a>
@@ -88,22 +86,22 @@ export function Navbar() {
       {isMenuOpen && (
         <div className="border-t border-white/6 bg-[#141414] lg:hidden">
           <nav className="mx-auto grid max-w-7xl gap-1 px-4 py-4 sm:px-6">
-            {NAV_LINKS.map((link) => (
+            {NAV_LINKS.map(({ label, href }) => (
               <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
+                key={label}
+                href={href}
                 onClick={() => {
-                  setActiveLink(link);
+                  setActiveLink(label);
                   setIsMenuOpen(false);
                 }}
                 className={cn(
                   "rounded-md px-3 py-2.5 text-[13px] font-bold uppercase tracking-[0.14em] transition-colors",
-                  activeLink === link
+                  activeLink === label
                     ? "bg-white/6 text-white"
-                    : "text-white/60 hover:bg-white/4 hover:text-amber-400",
+                    : "text-white/60 hover:bg-white/4 hover:text-amber-300",
                 )}
               >
-                {link}
+                {label}
               </a>
             ))}
           </nav>

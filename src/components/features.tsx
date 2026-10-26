@@ -65,7 +65,7 @@ export function Features({ items = SERVICES, className }: FeaturesProps) {
         className,
       )}
     >
-      <div className="mx-auto w-full px-4 sm:px-6">
+      <div className="mx-auto w-full px-4 sm:px-6 space-y-4">
         {/* ---------------- Section header ---------------- */}
         <p className="text-[13px] font-bold tracking-[0.28em] text-amber-500 uppercase">
           Features
@@ -73,7 +73,7 @@ export function Features({ items = SERVICES, className }: FeaturesProps) {
         <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
           What I Do<span className="text-amber-500">.</span>
         </h2>
-        <p className="text-white/50">
+        <p className="max-w-2xl text-sm leading-7 text-white/50 sm:text-base">
           I build modern web experiences by combining clean code, thoughtful UI
           design, and practical problem-solving.
         </p>

@@ -87,14 +87,14 @@ export function Skills() {
         {/* Section Header */}
         <div className="mb-10 space-y-4">
           <p className="text-[13px] font-bold tracking-[0.28em] text-red-500 uppercase">
-            My Expertise
+            My Skills
           </p>
 
           <h2
             id="skills-heading"
             className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl"
           >
-            Technologies I Work With
+            What I Know
             <span className="text-red-500">.</span>
           </h2>
 

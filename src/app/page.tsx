@@ -1,4 +1,5 @@
 import { Banner } from "@/components/banner";
+import { Contact } from "@/components/contact";
 import { Features } from "@/components/features";
 import { Portfolio } from "@/components/portfolio";
 import { Skills } from "@/components/skills";
@@ -16,6 +17,7 @@ export default function Home() {
         </div>
       </div>
       <Portfolio />
+      <Contact />
     </div>
   );
 }

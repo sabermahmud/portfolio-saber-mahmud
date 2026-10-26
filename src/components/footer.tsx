@@ -18,9 +18,7 @@ const QUICK_LINKS: FooterLink[] = [
   { label: "Home", href: "#home" },
   { label: "Features", href: "#features" },
   { label: "Skills", href: "#skills" },
-  { label: "My Portfolio", href: "#myportfolio" },
-  { label: "Resume", href: "#resume" },
-  { label: "Clients", href: "#clients" },
+  { label: "Projects", href: "#myportfolio" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -72,7 +70,7 @@ export function Footer({ className }: { className?: string }) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className={cn("bg-[#0f0f0f] pt-20 pb-10", className)}>
+    <footer className={cn("bg-[#0f0f0f] border-t border-amber-300 pt-20 pb-10", className)}>
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-x-8 gap-y-12 lg:grid-cols-[1.5fr_1fr_1fr]">
           {/* ---------------- Brand ---------------- */}
@@ -133,7 +131,7 @@ function LinkColumn({ title, links }: { title: string; links: FooterLink[] }) {
       <h3 className="text-base font-bold tracking-[0.08em] text-amber-400 uppercase">
         {title}
       </h3>
-      <ul className="mt-6 flex flex-col gap-7">
+      <ul className="mt-6 grid grid-cols-2 gap-4">
         {links.map((link) => (
           <li key={link.label}>
             <a
