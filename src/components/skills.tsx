@@ -81,7 +81,7 @@ export function Skills() {
     <section
       id="skills"
       aria-labelledby="skills-heading"
-      className="scroll-mt-20   px-6 py-24 sm:px-8 h-screen"
+      className="scroll-mt-20   px-6 py-24 sm:px-8 lg:h-screen"
     >
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}
