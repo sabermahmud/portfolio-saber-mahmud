@@ -94,7 +94,7 @@ export function Skills() {
             id="skills-heading"
             className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl"
           >
-            What I Know
+            What I Use
             <span className="text-red-500">.</span>
           </h2>
 
