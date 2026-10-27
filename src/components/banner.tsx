@@ -202,10 +202,10 @@ export function Banner() {
         <div className="mt-20 flex justify-center pt-5 lg:mt-12">
           <Link
             href="#myportfolio"
-            className="group inline-flex items-center gap-2 text-xs font-medium tracking-wide text-white/35 transition-colors hover:text-amber-300"
+            className="group inline-flex items-center gap-2 text-lg lg:text-xl font-medium tracking-wide text-amber-300"
           >
             <ArrowDown
-              size={14}
+              size={20}
               aria-hidden="true"
               className="animate-bounce"
             />
